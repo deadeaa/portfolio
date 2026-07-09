@@ -88,7 +88,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/resume.pdf"
+              href="/cv-dealova.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full transition-all duration-300 hover:scale-110"

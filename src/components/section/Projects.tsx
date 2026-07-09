@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui
 import { Badge } from '../ui/badge';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 import { ExternalLink, Code, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
-import { socialLinks } from '../../config/socialLinks';
 import { lightStars, darkStars, specialStars } from '../../assets/stars';
 import { comingSoon } from '../../assets';
 import crownMerci from '../../assets/projects/merci/crown.png';
