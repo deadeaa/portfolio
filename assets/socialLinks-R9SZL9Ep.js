@@ -1,0 +1,1 @@
+const a={github:"https://github.com/deadeaa",linkedin:"https://www.linkedin.com/in/dealova-a-n-anggraini",email:"dealovanadine21@gmail.com",display:{github:"https://github.com/deadeaa".replace("https://",""),linkedin:"https://www.linkedin.com/in/dealova-a-n-anggraini".replace("https://",""),email:"dealovanadine21@gmail.com"}};export{a as s};
