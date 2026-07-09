@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/portfolio/', // <-- WAJIB TAMBAH INI (Pakai garis miring di awal & akhir)
   plugins: [react()],
   resolve: {
     alias: {

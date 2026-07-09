@@ -17,7 +17,7 @@ const Navigation = () => {
   const tabs = useMemo(() => [
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
-    { id: 'experience', label: 'Experience' },
+    // { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' }
   ], []);
 

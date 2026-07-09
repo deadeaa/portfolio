@@ -9,6 +9,10 @@ import { ExternalLink, Code, Heart, ChevronLeft, ChevronRight } from 'lucide-rea
 import { socialLinks } from '../../config/socialLinks';
 import { lightStars, darkStars, specialStars } from '../../assets/stars';
 import { comingSoon } from '../../assets';
+import crownMerci from '../../assets/projects/merci/crown.png';
+import iconImg from '../../assets/projects/nara/icon.png';
+import btectImg from '../../assets/projects/btect/icon.png';
+import oxyImg from '../../assets/projects/oxy/icon.png';
 
 const Projects = () => {
   const { isDarkMode } = useDarkMode();
@@ -232,32 +236,32 @@ const Projects = () => {
     title: "OxyWatch",
     description: "An IoT-based telehealth ecosystem featuring an event-driven Python backend, real-time biometric telemetry streaming, and automated AI data insights.",
     technologies: ["Python", "Flask", "IoT Telemetry", "RESTful API", "AI Integration"],
-    icon: comingSoon, // Bisa diganti dengan component icon / image asset kamu
-    detailsUrl: "/projects/OxyWatch",
+    icon: oxyImg, // Bisa diganti dengan component icon / image asset kamu
+    detailsUrl: "/projects/oxywatch",
     githubUrl: "https://github.com/deadeaa/OxyWatch.git"
   },
   {
     title: "Nara Calendar",
     description: "A contextual AI-powered daily planner that logs user biometric states and utilizes structured relational database logic to generate automated schedule recommendations.",
     technologies: ["Flask", "MySQL", "SQLite", "Python", "Relational Database"],
-    icon: comingSoon,
-    detailsUrl: "/projects/NaraCalendar",
+    icon: iconImg,
+    detailsUrl: "/projects/nara-calendar",
     githubUrl: "https://github.com/deadeaa/NaRaCalendar.git" // Sesuaikan dengan link asli repo kamu
   },
   {
     title: "MERCI",
     description: "An interactive AI skincare e-commerce platform integrated with an automated backend conversational pipeline for personalized product lifestyle optimization.",
     technologies: ["Python", "Flask", "Conversational AI", "Git", "API Design"],
-    icon: comingSoon,
-    detailsUrl: "/projects/MerciSkincare",
+    icon: crownMerci,
+    detailsUrl: "/projects/merci",
     githubUrl: "https://github.com/deadeaa/MerciSkinCare.git" // Sesuaikan dengan link asli repo kamu
   },
   {
     title: "B-Tect",
     description: "A secure and automated verification or tracking platform built during prior developer sprints to optimize process integration and data workflow efficiency.",
     technologies: ["JavaScript", "HTML/CSS", "Software Testing", "Structured Logic"],
-    icon: comingSoon,
-    detailsUrl: "/projects/BTect",
+    icon: btectImg,
+    detailsUrl: "/projects/b-tect",
     githubUrl: "https://github.com/deadeaa/B-Tect.git" // Sesuaikan dengan link asli repo kamu
   }
 ];

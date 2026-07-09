@@ -40,6 +40,17 @@ const {
     UnityLight: Unity,
     VercelLight: Vercel,
     ViteLight: Vite,
+    // Tambahan icon yang diperlukan
+    Python,
+    Flask,
+    PHP,
+    MySQL,
+    PostgreSQL,
+    SQLite,
+    OpenCV,
+    Pandas,
+    NumPy,
+    Git,
 } = techStackIcons;
 
 type ImageItem = string | { src: string; alt?: string };
@@ -73,37 +84,61 @@ type ItemDef = {
     sizeY: number;
 };
 
+// ============================================================
+// 🎯 SKILLS - Disesuaikan dengan CV dan Project Kamu
+// ============================================================
 const DEFAULT_IMAGES: ImageItem[] = [
-    { src: JavaScript, alt: "JavaScript" },
-    { src: TypeScript, alt: "TypeScript" },
+    // ====== BACKEND & DATA ENGINEERING ======
+    { src: Python, alt: "Python" },
+    { src: Flask, alt: "Flask" },
     { src: NodeJS, alt: "Node.js" },
-    { src: HTML, alt: "HTML" },
-    { src: CSS, alt: "CSS" },
-    { src: Unity, alt: "Unity" },
-    { src: TailwindCSS, alt: "Tailwind CSS" },
-    { src: MongoDB, alt: "MongoDB" },
     { src: ExpressJS, alt: "Express.js" },
-    { src: Docker, alt: "Docker" },
-    { src: GraphQL, alt: "GraphQL" },
-    { src: Redis, alt: "Redis" },
-    { src: C, alt: "C" },
+    { src: PHP, alt: "PHP" },
+    { src: Pandas, alt: "Pandas" },
+    { src: NumPy, alt: "NumPy" },
+    
+    // ====== MOBILE & FRONTEND ======
     { src: Flutter, alt: "Flutter" },
     { src: Dart, alt: "Dart" },
-    { src: MaterialUI, alt: "Material UI" },
-    { src: Electron, alt: "Electron" },
-    { src: TensorFlow, alt: "TensorFlow" },
-    { src: ThreeJS, alt: "Three.js" },
-    { src: Vite, alt: "Vite" },
-    { src: Vercel, alt: "Vercel" },
+    { src: ReactIcon, alt: "React" },
+    { src: JavaScript, alt: "JavaScript" },
+    { src: TypeScript, alt: "TypeScript" },
+    { src: HTML, alt: "HTML" },
+    { src: CSS, alt: "CSS" },
+    { src: TailwindCSS, alt: "Tailwind CSS" },
     { src: Bootstrap, alt: "Bootstrap" },
     { src: JQuery, alt: "jQuery" },
-    { src: Java, alt: "Java" },
-    { src: ReactIcon, alt: "React" },
-    { src: CS, alt: "C#" },
+    { src: MaterialUI, alt: "Material UI" },
+    
+    // ====== DATABASE ======
+    { src: MySQL, alt: "MySQL" },
+    { src: PostgreSQL, alt: "PostgreSQL" },
+    { src: MongoDB, alt: "MongoDB" },
+    { src: SQLite, alt: "SQLite" },
+    { src: Redis, alt: "Redis" },
+    
+    // ====== AI & MACHINE LEARNING ======
+    { src: TensorFlow, alt: "TensorFlow" },
+    { src: OpenCV, alt: "OpenCV" },
+    
+    // ====== CLOUD & DEVOPS ======
     { src: AWS, alt: "AWS" },
+    { src: Docker, alt: "Docker" },
+    { src: Vercel, alt: "Vercel" },
+    { src: Vite, alt: "Vite" },
+    { src: Git, alt: "Git" },
     { src: Github, alt: "GitHub" },
     { src: Postman, alt: "Postman" },
+    
+    // ====== OTHER SKILLS ======
+    { src: C, alt: "C" },
     { src: CPP, alt: "C++" },
+    { src: CS, alt: "C#" },
+    { src: Java, alt: "Java" },
+    { src: Unity, alt: "Unity" },
+    { src: Electron, alt: "Electron" },
+    { src: ThreeJS, alt: "Three.js" },
+    { src: GraphQL, alt: "GraphQL" },
     { src: Npm, alt: "npm" },
     { src: Notion, alt: "Notion" },
     { src: LaTeX, alt: "LaTeX" },
@@ -842,16 +877,6 @@ export default function DomeGallery({
       }
     }
     
-    // body.dg-scroll-lock {
-    //   position: fixed !important;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100% !important;
-    //   height: 100% !important;
-    //   overflow: hidden !important;
-    //   touch-action: none !important;
-    //   overscroll-behavior: contain !important;
-    // }
     .item__image {
       position: absolute;
       inset: 10px;

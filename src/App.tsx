@@ -8,12 +8,15 @@ import About from './components/section/About'
 import { divider } from './assets'
 import './App.css'
 
+// Di App.tsx, tambahkan import dan route
+const CertificateDetail = lazy(() => import('./pages/CertificateDetail'));
+
 // Lazy load project pages
 const Contact = lazy(() => import('./pages/Contact'))
 
 // Lazy load below-the-fold components for better initial load
 const Projects = lazy(() => import('./components/section/Projects'))
-const Experience = lazy(() => import('./components/section/Experience'))
+// const Experience = lazy(() => import('./components/section/Experience')) // 👈 DI-COMMENT
 const Skills = lazy(() => import('./components/section/Skills'))
 const Certifications = lazy(() => import('./components/section/Certifications'))
 const Footer = lazy(() => import('./components/Footer'))
@@ -21,7 +24,7 @@ const Footer = lazy(() => import('./components/Footer'))
 // Jalur import komponen halaman proyek baru kamu
 const OxyWatch = lazy(() => import('./pages/projects/OxyWatch'));
 const NaraCalendar = lazy(() => import('./pages/projects/NaraCalendar'));
-const Merci = lazy(() => import('./pages/projects/MerciSkincare'));
+const MerciSkincare = lazy(() => import('./pages/projects/MerciSkincare'));
 const BTect = lazy(() => import('./pages/projects/BTect'));
 
 function HomePage() {
@@ -34,9 +37,12 @@ function HomePage() {
       <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
         <Projects />
       </Suspense>
-      <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading...</div>}>
+      
+      {/* 👇 EXPERIENCE - DI-COMMENT */}
+      {/* <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading...</div>}>
         <Experience />
-      </Suspense>
+      </Suspense> */}
+      
       {/* Divider with gradient transitions */}
       <div className="w-full py-8 relative" style={{
         background: isDarkMode ? themeColors.background.gradientEnd : colors.white,
@@ -78,6 +84,7 @@ function HomePage() {
           loading="lazy"
         />
       </div>
+      
       <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
         <Skills />
       </Suspense>
@@ -102,10 +109,11 @@ function AppContent() {
               <Route path="/" element={<HomePage />} />
               <Route path="/contact" element={<Contact />} />
               
+              <Route path="/certificate/:id" element={<CertificateDetail />} />
               {/* Rute Proyek Kamu ditaruh di sini */}
               <Route path="/projects/oxywatch" element={<OxyWatch />} />
               <Route path="/projects/nara-calendar" element={<NaraCalendar />} />
-              <Route path="/projects/merci" element={<Merci />} />
+              <Route path="/projects/merci" element={<MerciSkincare />} />
               <Route path="/projects/b-tect" element={<BTect />} />
             </Routes>
           </Suspense>

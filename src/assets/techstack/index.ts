@@ -34,6 +34,18 @@ import UnityLight from './Unity-Light.svg';
 import VercelLight from './Vercel-Light.svg';
 import ViteLight from './Vite-Light.svg';
 
+// ====== TAMBAHAN ICON BARU ======
+import Python from './Python.svg';
+import Flask from './Flask.svg';
+import PHP from './PHP.svg';
+import MySQL from './MySQL.svg';
+import PostgreSQL from './PostgreSQL.svg';
+import SQLite from './SQLite.svg';
+import OpenCV from './OpenCV.svg';
+import Pandas from './Pandas.svg';
+import NumPy from './NumPy.svg';
+import Git from './Git.svg';
+
 export const techStackIcons = {
   AWSLight,
   Bootstrap,
@@ -69,6 +81,17 @@ export const techStackIcons = {
   UnityLight,
   VercelLight,
   ViteLight,
+  // ====== TAMBAHAN ======
+  Python,
+  Flask,
+  PHP,
+  MySQL,
+  PostgreSQL,
+  SQLite,
+  OpenCV,
+  Pandas,
+  NumPy,
+  Git,
 };
 
 // Export as array for easier iteration if needed
