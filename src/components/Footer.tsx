@@ -2,6 +2,7 @@ import { useDarkMode } from '../contexts/DarkModeContext';
 import { useThemeColors } from '../hooks/useThemeColors';
 import { FileText, ArrowUp } from 'lucide-react';
 import { socialLinks } from '../config/socialLinks';
+import cvFile from '../assets/cv-dealova.pdf'; // ← IMPORT PDF
 
 const Footer = () => {
   const { isDarkMode } = useDarkMode();
@@ -18,7 +19,6 @@ const Footer = () => {
     }}>
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          {/* Left - Made with heart and copyright (centered on mobile) */}
           <div className="flex flex-col items-center md:items-start space-y-2 md:flex-1">
             <div className="flex items-center" style={{ color: isDarkMode ? themeColors.colors.white : themeColors.colors.pink[700] }}>
               <span className="text-m font-medium">
@@ -31,7 +31,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Center - Back to top button */}
           <div className="flex flex-col items-center justify-center md:flex-1">
             <button
               onClick={scrollToTop}
@@ -53,7 +52,6 @@ const Footer = () => {
             </span>
           </div>
 
-          {/* Right - Social buttons */}
           <div className="flex items-center justify-end space-x-4 md:flex-1">
             <a
               href={socialLinks.github}
@@ -88,7 +86,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/cv-dealova.pdf"
+              href={cvFile}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full transition-all duration-300 hover:scale-110"

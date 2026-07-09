@@ -5,6 +5,7 @@ import TypewriterCarousel from '../TypewriterCarousel';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import { useThemeColors, withAlpha } from '../../hooks/useThemeColors';
 import { aboutMeJournalWebp800, aboutMeJournalWebp400, stickers as stickerImages } from '../../assets';
+import cvFile from '../../assets/cv-dealova.pdf'; // ← IMPORT PDF
 
 const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -31,7 +32,6 @@ const About = () => {
 ⠀⠀⠴⠛⠙⣳⠋⠉⠉⠙⣆⠀⠀⢰⡟⠉⠈⠙⢷⠟⠈⠙⠂⠀
 ⠀⠀⠀⠀⠀⢻⣄⣠⣤⣴⠟⠛⠛⠛⢧⣤⣤⣀⡾⠀⠀⠀⠀⠀`;
 
-  // Typewriter effect for ASCII art
   useEffect(() => {
     let currentIndex = 0;
     const typingSpeed = 3;
@@ -145,7 +145,6 @@ const About = () => {
       maxWidth: '100vw',
       contain: 'layout style'
     }}>
-      {/* Hero Section */}
       <div className="py-10 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl mx-auto gap-8">
@@ -163,7 +162,7 @@ const About = () => {
                 <button
                   className="hero-action-btn text-sm md:text-base px-4 py-2 md:px-5 md:py-2.5"
                   onClick={() => {
-                    window.open('/cv-dealova.pdf', '_blank');
+                    window.open(cvFile, '_blank');
                   }}
                 >
                   Resume →
@@ -183,7 +182,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* About Section with Stickers and Journal */}
       <div className="py-8 md:py-12" style={{
         background: isDarkMode
           ? 'transparent'
@@ -191,7 +189,6 @@ const About = () => {
       }}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-center justify-center relative min-h-[400px] md:min-h-[600px]">
-            {/* Animated Stickers */}
             <div className="absolute inset-0 flex items-center justify-center">
               {stickers.map((sticker) => {
                 const isVerySmall = window.innerWidth < 375;
@@ -212,7 +209,6 @@ const About = () => {
               })}
             </div>
 
-            {/* About Me Journal Image */}
             <div className="w-full md:max-w-2xl lg:max-w-4xl relative z-20 px-1 md:px-0">
               <picture>
                 <source
