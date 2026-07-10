@@ -40,6 +40,7 @@ const {
     UnityLight: Unity,
     VercelLight: Vercel,
     ViteLight: Vite,
+    
     // Tambahan icon yang diperlukan
     Python,
     Flask,
@@ -51,6 +52,11 @@ const {
     Pandas,
     NumPy,
     Git,
+    
+    // // ====== 🆕 HARDWARE & IOT ICONS ======
+    // Arduino,
+    // MQTT,
+    // ESP32,
 } = techStackIcons;
 
 type ImageItem = string | { src: string; alt?: string };
@@ -85,10 +91,23 @@ type ItemDef = {
 };
 
 // ============================================================
-// 🎯 SKILLS - Disesuaikan dengan CV dan Project Kamu
+// 🎯 SKILLS - Dengan Hardware IoT & XR Simulation
 // ============================================================
 const DEFAULT_IMAGES: ImageItem[] = [
-    // ====== BACKEND & DATA ENGINEERING ======
+    // ============================================================
+    // 🆕 IOT, HARDWARE & XR SIMULATION (Ditaruh di atas biar keliatan)
+    // ============================================================
+    { src: Unity, alt: "Unity" },
+    { src: CS, alt: "C#" },
+    { src: CPP, alt: "C++" },
+    { src: C, alt: "C" },
+    // { src: Arduino, alt: "Arduino / ESP32" },
+    // { src: MQTT, alt: "MQTT / MQTTX" },
+    // { src: ESP32, alt: "ESP32" },
+
+    // ============================================================
+    // BACKEND & DATA ENGINEERING
+    // ============================================================
     { src: Python, alt: "Python" },
     { src: Flask, alt: "Flask" },
     { src: NodeJS, alt: "Node.js" },
@@ -96,8 +115,11 @@ const DEFAULT_IMAGES: ImageItem[] = [
     { src: PHP, alt: "PHP" },
     { src: Pandas, alt: "Pandas" },
     { src: NumPy, alt: "NumPy" },
+    { src: Java, alt: "Java" },
     
-    // ====== MOBILE & FRONTEND ======
+    // ============================================================
+    // MOBILE & FRONTEND
+    // ============================================================
     { src: Flutter, alt: "Flutter" },
     { src: Dart, alt: "Dart" },
     { src: ReactIcon, alt: "React" },
@@ -110,18 +132,24 @@ const DEFAULT_IMAGES: ImageItem[] = [
     { src: JQuery, alt: "jQuery" },
     { src: MaterialUI, alt: "Material UI" },
     
-    // ====== DATABASE ======
+    // ============================================================
+    // DATABASE
+    // ============================================================
     { src: MySQL, alt: "MySQL" },
     { src: PostgreSQL, alt: "PostgreSQL" },
     { src: MongoDB, alt: "MongoDB" },
     { src: SQLite, alt: "SQLite" },
     { src: Redis, alt: "Redis" },
     
-    // ====== AI & MACHINE LEARNING ======
+    // ============================================================
+    // AI & MACHINE LEARNING
+    // ============================================================
     { src: TensorFlow, alt: "TensorFlow" },
     { src: OpenCV, alt: "OpenCV" },
     
-    // ====== CLOUD & DEVOPS ======
+    // ============================================================
+    // CLOUD & DEVOPS
+    // ============================================================
     { src: AWS, alt: "AWS" },
     { src: Docker, alt: "Docker" },
     { src: Vercel, alt: "Vercel" },
@@ -130,12 +158,9 @@ const DEFAULT_IMAGES: ImageItem[] = [
     { src: Github, alt: "GitHub" },
     { src: Postman, alt: "Postman" },
     
-    // ====== OTHER SKILLS ======
-    { src: C, alt: "C" },
-    { src: CPP, alt: "C++" },
-    { src: CS, alt: "C#" },
-    { src: Java, alt: "Java" },
-    { src: Unity, alt: "Unity" },
+    // ============================================================
+    // OTHER TOOLS
+    // ============================================================
     { src: Electron, alt: "Electron" },
     { src: ThreeJS, alt: "Three.js" },
     { src: GraphQL, alt: "GraphQL" },
@@ -345,18 +370,15 @@ export default function DomeGallery({
             );
             applyTransform(rotationRef.current.x, rotationRef.current.y);
 
-            // Only perform expensive DOM calculations when overlay exists
             const enlargedOverlay = viewerRef.current?.querySelector(
                 ".enlarge"
             ) as HTMLElement;
             if (enlargedOverlay && frameRef.current && mainRef.current) {
-                // Batch DOM reads to minimize layout thrashing
                 const frameR = frameRef.current.getBoundingClientRect();
                 const mainR = mainRef.current.getBoundingClientRect();
 
                 const hasCustomSize = openedImageWidth && openedImageHeight;
                 if (hasCustomSize) {
-                    // Use CSS calculations instead of DOM manipulation when possible
                     const tempDiv = document.createElement("div");
                     tempDiv.style.cssText = `position: absolute; width: ${openedImageWidth}; height: ${openedImageHeight}; visibility: hidden; top: -9999px;`;
                     document.body.appendChild(tempDiv);
@@ -368,13 +390,11 @@ export default function DomeGallery({
                     const centeredTop =
                         frameR.top - mainR.top + (frameR.height - tempRect.height) / 2;
 
-                    // Batch DOM writes
                     Object.assign(enlargedOverlay.style, {
                         left: `${centeredLeft}px`,
                         top: `${centeredTop}px`
                     });
                 } else {
-                    // Batch DOM writes
                     Object.assign(enlargedOverlay.style, {
                         left: `${frameR.left - mainR.left}px`,
                         top: `${frameR.top - mainR.top}px`,
@@ -979,6 +999,8 @@ export default function DomeGallery({
                                                 backfaceVisibility: "hidden",
                                                 filter: `var(--image-filter, ${grayscale ? "grayscale(1)" : "none"})`,
                                             }}
+                                            loading="lazy"
+                                            aria-hidden={!it.alt}
                                         />
                                     </div>
                                 </div>

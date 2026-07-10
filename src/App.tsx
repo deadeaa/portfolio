@@ -26,6 +26,7 @@ const OxyWatch = lazy(() => import('./pages/projects/OxyWatch'));
 const NaraCalendar = lazy(() => import('./pages/projects/NaraCalendar'));
 const MerciSkincare = lazy(() => import('./pages/projects/MerciSkincare'));
 const BTect = lazy(() => import('./pages/projects/BTect'));
+const VirtualCity = lazy(() => import('./pages/projects/Smart')); // ← TAMBAHKAN
 
 function HomePage() {
   const { isDarkMode } = useDarkMode();
@@ -110,11 +111,13 @@ function AppContent() {
               <Route path="/contact" element={<Contact />} />
               
               <Route path="/certificate/:id" element={<CertificateDetail />} />
-              {/* Rute Proyek Kamu ditaruh di sini */}
+              
+              {/* Rute Proyek */}
               <Route path="/projects/oxywatch" element={<OxyWatch />} />
               <Route path="/projects/nara-calendar" element={<NaraCalendar />} />
               <Route path="/projects/merci" element={<MerciSkincare />} />
               <Route path="/projects/b-tect" element={<BTect />} />
+              <Route path="/projects/vr-iot-smartcity" element={<VirtualCity />} /> {/* ← TAMBAHKAN */}
             </Routes>
           </Suspense>
         </main>

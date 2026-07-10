@@ -43,7 +43,7 @@ const Skills = () => {
       setScale(finalScale);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true }); // ← tambah passive: true
     handleScroll(); // Initial calculation
 
     return () => {
@@ -52,10 +52,16 @@ const Skills = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="skills" className="min-h-screen py-20 relative" style={{
-      background: themeColors.background.sections?.skills || themeColors.background.gradient,
-      transition: 'background 0.3s ease-in-out'
-    }}>
+    <section 
+      ref={sectionRef} 
+      id="skills" 
+      className="min-h-screen py-20 relative" 
+      aria-label="Technical Skills" // ← tambah aria-label
+      style={{
+        background: themeColors.background.sections?.skills || themeColors.background.gradient,
+        transition: 'background 0.3s ease-in-out'
+      }}
+    >
       {/* Gradient overlay for smooth transition from previous section */}
       <div 
         className="absolute top-0 left-0 right-0 pointer-events-none"
@@ -68,7 +74,9 @@ const Skills = () => {
         }}
       />
       <div className="container mx-auto px-6 relative" style={{ zIndex: 2 }}>
-        <h2 className="text-4xl font-bold text-center mb-12" style={{ color: isDarkMode ? themeColors.colors.white : themeColors.colors.pink[500] }}>Skills</h2>
+        <h2 className="text-4xl font-bold text-center mb-12" style={{ color: isDarkMode ? themeColors.colors.white : themeColors.colors.pink[500] }}>
+          Skills
+        </h2>
         <div
           ref={domeContainerRef}
           className="relative w-full"
@@ -79,7 +87,7 @@ const Skills = () => {
             willChange: 'transform',
           }}
         >
-          <DomeGallery />
+          <DomeGallery key={isDarkMode ? 'dark' : 'light'} /> {/* ← tambah key */}
           {/* Faded edges overlay with performance-optimized blending */}
           <div
             className="absolute inset-0 pointer-events-none"

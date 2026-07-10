@@ -12,6 +12,7 @@ import crownMerci from '../../assets/projects/merci/crown.png';
 import iconImg from '../../assets/projects/nara/icon.png';
 import btectImg from '../../assets/projects/btect/icon.png';
 import oxyImg from '../../assets/projects/oxy/icon.png';
+import vrImg from '../../assets/projects/vr-iot/icon.jpeg'; 
 
 const Projects = () => {
   const { isDarkMode } = useDarkMode();
@@ -229,41 +230,50 @@ const Projects = () => {
     };
   }, [draggedStar]);
 
-  // project data - these are the main cards
+  
   const projects = [
-  {
-    title: "OxyWatch",
-    description: "An IoT-based telehealth ecosystem featuring an event-driven Python backend, real-time biometric telemetry streaming, and automated AI data insights.",
-    technologies: ["Python", "Flask", "IoT Telemetry", "RESTful API", "AI Integration"],
-    icon: oxyImg, // Bisa diganti dengan component icon / image asset kamu
-    detailsUrl: "/projects/oxywatch",
-    githubUrl: "https://github.com/deadeaa/OxyWatch.git"
-  },
-  {
-    title: "Nara Calendar",
-    description: "A contextual AI-powered daily planner that logs user biometric states and utilizes structured relational database logic to generate automated schedule recommendations.",
-    technologies: ["Flask", "MySQL", "SQLite", "Python", "Relational Database"],
-    icon: iconImg,
-    detailsUrl: "/projects/nara-calendar",
-    githubUrl: "https://github.com/deadeaa/NaRaCalendar.git" // Sesuaikan dengan link asli repo kamu
-  },
-  {
-    title: "MERCI",
-    description: "An interactive AI skincare e-commerce platform integrated with an automated backend conversational pipeline for personalized product lifestyle optimization.",
-    technologies: ["Python", "Flask", "Conversational AI", "Git", "API Design"],
-    icon: crownMerci,
-    detailsUrl: "/projects/merci",
-    githubUrl: "https://github.com/deadeaa/MerciSkinCare.git" // Sesuaikan dengan link asli repo kamu
-  },
-  {
-    title: "B-Tect",
-    description: "A secure and automated verification or tracking platform built during prior developer sprints to optimize process integration and data workflow efficiency.",
-    technologies: ["JavaScript", "HTML/CSS", "Software Testing", "Structured Logic"],
-    icon: btectImg,
-    detailsUrl: "/projects/b-tect",
-    githubUrl: "https://github.com/deadeaa/B-Tect.git" // Sesuaikan dengan link asli repo kamu
-  }
-];
+    {
+      title: "OxyWatch",
+      description: "An IoT-based telehealth ecosystem featuring an event-driven Python backend, real-time biometric telemetry streaming, and automated AI data insights.",
+      technologies: ["Python", "Flask", "IoT Telemetry", "RESTful API", "AI Integration"],
+      icon: oxyImg,
+      detailsUrl: "/projects/oxywatch",
+      githubUrl: "https://github.com/deadeaa/OxyWatch.git"
+    },
+    {
+      title: "Nara Calendar",
+      description: "A contextual AI-powered daily planner that logs user biometric states and utilizes structured relational database logic to generate automated schedule recommendations.",
+      technologies: ["Flask", "MySQL", "SQLite", "Python", "Relational Database"],
+      icon: iconImg,
+      detailsUrl: "/projects/nara-calendar",
+      githubUrl: "https://github.com/deadeaa/NaRaCalendar.git"
+    },
+    {
+      title: "MERCI",
+      description: "An interactive AI skincare e-commerce platform integrated with an automated backend conversational pipeline for personalized product lifestyle optimization.",
+      technologies: ["Python", "Flask", "Conversational AI", "Git", "API Design"],
+      icon: crownMerci,
+      detailsUrl: "/projects/merci",
+      githubUrl: "https://github.com/deadeaa/MerciSkinCare.git"
+    },
+    {
+      title: "B-Tect",
+      description: "A secure and automated verification or tracking platform built during prior developer sprints to optimize process integration and data workflow efficiency.",
+      technologies: ["JavaScript", "HTML/CSS", "Software Testing", "Structured Logic"],
+      icon: btectImg,
+      detailsUrl: "/projects/b-tect",
+      githubUrl: "https://github.com/deadeaa/B-Tect.git"
+    },
+   
+    {
+      title: "VR x IoT Smart City",
+      description: "A high-fidelity Digital Twin prototype that bridges immersive Virtual Reality (VR) environments with physical hardware in real-time using Unity and MQTTX.",
+      technologies: ["Unity", "C#", "ESP32", "MQTTX", "Ultrasonic Sensors"],
+      icon: vrImg,
+      detailsUrl: "/projects/vr-iot-smartcity",
+      githubUrl: "https://github.com/deadeaa/SmartPublicInfrastucture.git"
+    }
+  ];
 
   // Calculate carousel pagination
   const totalPages = Math.ceil(projects.length / projectsPerPage);

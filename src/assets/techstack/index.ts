@@ -46,6 +46,11 @@ import Pandas from './Pandas.svg';
 import NumPy from './NumPy.svg';
 import Git from './Git.svg';
 
+// ====== 🆕 HARDWARE & IOT ICONS ======
+// import Arduino from './Arduino.svg';
+// import MQTT from './MQTT.png';
+// import ESP32 from './ESP32.svg';
+
 export const techStackIcons = {
   AWSLight,
   Bootstrap,
@@ -92,6 +97,10 @@ export const techStackIcons = {
   Pandas,
   NumPy,
   Git,
+  // // ====== 🆕 HARDWARE & IOT ======
+  // Arduino,
+  // MQTT,
+  // ESP32,
 };
 
 // Export as array for easier iteration if needed
