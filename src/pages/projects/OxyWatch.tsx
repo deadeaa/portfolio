@@ -10,12 +10,18 @@ import { useThemeColors } from '../../hooks/useThemeColors';
 // Import screenshots - Sesuaikan dengan path file kamu
 import screenshot1 from '../../assets/projects/oxy/akun.png';
 import screenshot2 from '../../assets/projects/oxy/dash.png';
-import screenshot3 from '../../assets/projects/oxy/monitor.png';
-import screenshot4 from '../../assets/projects/oxy/riwayat.png';
-import screenshot5 from '../../assets/projects/oxy/profile.png';
-import screenshot6 from '../../assets/projects/oxy/notif.png';
-import screenshot7 from '../../assets/projects/oxy/drdash.png';
-import screenshot8 from '../../assets/projects/oxy/chat.png';
+import screenshot3 from '../../assets/projects/oxy/dashh.png';
+import screenshot4 from '../../assets/projects/oxy/monitor.png';
+import screenshot5 from '../../assets/projects/oxy/monitorr.png';
+import screenshot6 from '../../assets/projects/oxy/simulasi.png';
+import screenshot7 from '../../assets/projects/oxy/chat.png';
+import screenshot8 from '../../assets/projects/oxy/chatt.png';
+import screenshot9 from '../../assets/projects/oxy/riwayat.png';
+import screenshot10 from '../../assets/projects/oxy/profile.png';
+import screenshot11 from '../../assets/projects/oxy/setting.png';
+import screenshot12 from '../../assets/projects/oxy/notif.png';
+import screenshot13 from '../../assets/projects/oxy/notiff.png';
+import screenshot14 from '../../assets/projects/oxy/drdash.png';
 import iconImg from '../../assets/projects/oxy/icon.png';
 
 const OxyWatch = () => {
@@ -31,6 +37,12 @@ const OxyWatch = () => {
     screenshot6,
     screenshot7,
     screenshot8,
+    screenshot9,
+    screenshot10,
+    screenshot11,
+    screenshot12,
+    screenshot13,
+    screenshot14,
   ].filter(Boolean);
 
   return (
